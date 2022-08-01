@@ -1,0 +1,338 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+/*Variables*/
+
+/*Reseteo*/
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/*Alinear el nav hacia el lado derecho*/
+.navbar-collapse {
+    flex-grow: 0;
+}
+.navbar-nav a:hover{
+    color: rgb(245, 56, 132);
+}
+a:active{
+    color: rgb(245, 56, 132);
+}
+
+.carousel-inner img{
+    /*max-height: 39rem;*/
+    height: 60vh;
+    filter : brightness(30%);
+    object-fit: cover;
+
+}
+
+
+
+a{color: black;}
+a:hover{ color: rgb(245, 56, 132);}
+/*Estilos Base*/
+body{
+    overflow-x: hidden; /*ocultar textos que sobresale*/
+    font-family: 'Mulish', sans-serif;
+}
+.button{
+    background-color:rgb(245, 56, 132);
+    border: 2px solid rgb(245, 56, 132);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+    display: inline-block;
+}
+.button:hover{
+    background-color: rgb(245, 7, 102); /*color de boton */
+}
+input,textarea{
+    background: rgba(255,255, 255, 0.05);
+    padding: 10px 10px;
+    border-radius: 10px;  /*no esta cambiando*/
+    border: 2px solid rgb(245, 56, 132);
+}
+
+
+
+.sombras{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+
+/*----------------------*/
+nav .contenedor{
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    /*justify-items: center;
+    align-items: center;*/
+}
+
+nav img{
+    width: 180px;
+
+}
+nav .logo{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+
+
+
+
+/*plan estratégico*/
+
+/*valores*/
+
+#whatsapp{
+    display:inline-block;
+    position: fixed ;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+}
+#whatsapp img{
+    width: 100%;
+}
+
+#contactos .contenedor{
+    text-align: center;
+    padding: 20px 20px;
+}
+#contactos h3{
+    margin-bottom: 20px;
+    
+}
+#contactos form{
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+#contactos input, 
+#contactos textarea{
+    width: 100%;
+    margin: 10px 0;
+}
+
+
+.transmitir_boton{
+    grid-column: 1/9;
+    text-align:end ;
+    margin-top: 15px;
+}
+
+.grilla{
+    display: grid;
+    grid-template-columns: auto;
+    grid-row: auto;
+     grid-template-areas: "f1 "
+                          "f2"
+                          "f3"
+                          "f4"
+                          "f5"
+                          "f6"
+                          "f7";
+
+}
+
+#sesiones .sesioness{
+    gap: 10px;
+    
+}
+
+/*galeria*/
+
+#sesiones img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.galeria_foto{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+.galeria_foto::before{
+    content:"ver";
+    position:absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #f34099a6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(100%);
+    transition: transform .4s ;
+}
+.galeria_foto:hover::before{
+    transform: translate(0);
+}
+
+/*blog*/
+.contenedor_blog{
+    grid-column: 1/9;
+    margin: 10px;
+}
+
+.contendor_aside{
+    grid-column: 1/9;
+    grid-row: 2;
+    margin: 10px;
+}
+.blog_imagen{
+    width: 100%;
+}
+
+
+
+
+#mapa .lugar {
+    width: 100%;
+    height: 40vh;
+    border: 1px solid rgb(197, 197, 197);
+    
+}
+
+
+
+/*Estilo movil*/
+
+/*Estilo de tablets pequeñas*/
+@media screen and (min-width: 620px){
+    
+   
+    #contactos .cuadros{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+    #contactos .cuadros div:nth-last-child(1){ /*El ultimo de la grilla*/
+        grid-column: 1/3;
+        grid-row: 2;
+    }
+    .grilla{
+       grid-template-columns: auto auto;
+        grid-template-areas: "f1 f2"
+                             "f3 f2"
+                             "f3 f6"
+                             "f7 f8";
+    
+    }
+    .foto4{
+        grid-area: f2;
+    
+    }
+    .foto5{
+        grid-area: f3;
+    
+    }
+    
+    
+    
+} 
+@media screen and (max-width: 768px){
+    #introduccion{
+        width: 90% !important;
+    }
+    #blogger{
+        width: 90% !important;
+    }
+    
+    
+
+}
+
+
+/*tables largas y laptop*/
+@media screen and (min-width: 960px){
+    
+    
+    #contactos .cuadros{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+    #contactos .cuadros div:nth-last-child(1){
+        grid-column: 3;
+        grid-row: 1;
+    }
+    .grilla{
+        grid-template-columns: auto auto;
+        grid-template-areas: "f1 f2 f3"
+                              "f4 f2 f3"
+                              "f5 f6 f7"
+                              "f5 f8 f9"
+                              "f10 f12 f13";
+     
+     }
+     .foto4{
+         grid-area: f2;
+     
+     }
+     .foto5{
+         grid-area: f3;
+     
+     }
+     .foto7{
+        grid-area: f5;
+    
+    }
+    
+}
+
+/*Estilos para destop*/
+@media screen and (min-width: 1200px){
+    .contenedor{
+            max-width: 1200px; /*1400 para diseño programa de diseño*/
+            margin: auto;
+            
+    }  
+    
+    .grilla{
+        grid-template-columns: auto auto;
+        grid-template-areas: "f1 f2 f3 f4"
+                             "f5 f2 f3 f8"
+                             "f5 f10 f11 f12"
+                            ;
+     
+     }
+     .foto4{
+        grid-area: f2;
+    
+    }
+    .foto5{
+        grid-area: f3;
+    
+    }
+    .foto7{
+        grid-area: f5;
+    
+    }
+    .foto3{
+        grid-area: f4;
+    
+    }
+    /*#sesiones .sesioness div{
+        grid-column: span 3;
+      
+     }*/
+     
+     
+
+
+}
+

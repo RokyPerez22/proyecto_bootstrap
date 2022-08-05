@@ -9,7 +9,7 @@
     text-decoration: none;
 }
 
-/*Alinear el nav hacia el lado derecho*/
+/*Alinear el Navbar hacia el lado derecho*/
 .navbar-collapse {
     flex-grow: 0;
 }
@@ -20,16 +20,15 @@ a:active{
     color: rgb(245, 56, 132);
 }
 
+/*Aplicar a imagen del carousel*/
 .carousel-inner img{
-    /*max-height: 39rem;*/
     height: 60vh;
     filter : brightness(30%);
     object-fit: cover;
 
 }
 
-
-
+/*Link de Hover*/
 a{color: black;}
 a:hover{ color: rgb(245, 56, 132);}
 /*Estilos Base*/
@@ -37,6 +36,8 @@ body{
     overflow-x: hidden; /*ocultar textos que sobresale*/
     font-family: 'Mulish', sans-serif;
 }
+
+/*Color a Botones*/
 .button{
     background-color:rgb(245, 56, 132);
     border: 2px solid rgb(245, 56, 132);
@@ -50,6 +51,8 @@ body{
 .button:hover{
     background-color: rgb(245, 7, 102); /*color de boton */
 }
+
+/*Color de controles de formulario*/
 input,textarea{
     background: rgba(255,255, 255, 0.05);
     padding: 10px 10px;
@@ -57,41 +60,17 @@ input,textarea{
     border: 2px solid rgb(245, 56, 132);
 }
 
-
-
 .sombras{
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
-
-/*----------------------*/
-nav .contenedor{
-    align-items: center;
-    text-align: center;
-    justify-items: center;
-    /*justify-items: center;
-    align-items: center;*/
-}
-
+/*Imagen en el Navbar*/
 nav img{
     width: 180px;
-
-}
-nav .logo{
-    grid-column: 1;
-    grid-row: 1;
 }
 
-
-
-
-
-
-/*plan estratégico*/
-
-/*valores*/
-
+/*whatsapp*/
 #whatsapp{
     display:inline-block;
     position: fixed ;
@@ -103,6 +82,7 @@ nav .logo{
     width: 100%;
 }
 
+/*Contactos*/
 #contactos .contenedor{
     text-align: center;
     padding: 20px 20px;
@@ -118,20 +98,20 @@ nav .logo{
     text-align: center;
 }
 
-
 #contactos input, 
 #contactos textarea{
     width: 100%;
     margin: 10px 0;
 }
 
-
+/*Botton transmitir*/
 .transmitir_boton{
     grid-column: 1/9;
     text-align:end ;
     margin-top: 15px;
 }
 
+/*galeria*/
 .grilla{
     display: grid;
     grid-template-columns: auto;
@@ -150,8 +130,6 @@ nav .logo{
     gap: 10px;
     
 }
-
-/*galeria*/
 
 #sesiones img{
     width: 100%;
@@ -184,39 +162,10 @@ nav .logo{
     transform: translate(0);
 }
 
-/*blog*/
-.contenedor_blog{
-    grid-column: 1/9;
-    margin: 10px;
-}
-
-.contendor_aside{
-    grid-column: 1/9;
-    grid-row: 2;
-    margin: 10px;
-}
-.blog_imagen{
-    width: 100%;
-}
-
-
-
-
-#mapa .lugar {
-    width: 100%;
-    height: 40vh;
-    border: 1px solid rgb(197, 197, 197);
-    
-}
-
-
-
-/*Estilo movil*/
 
 /*Estilo de tablets pequeñas*/
 @media screen and (min-width: 620px){
     
-   
     #contactos .cuadros{
         display: grid;
         grid-template-columns: 1fr 1fr ;
@@ -225,6 +174,8 @@ nav .logo{
         grid-column: 1/3;
         grid-row: 2;
     }
+    
+    /*Galeria de fotos*/
     .grilla{
        grid-template-columns: auto auto;
         grid-template-areas: "f1 f2"
@@ -241,10 +192,8 @@ nav .logo{
         grid-area: f3;
     
     }
-    
-    
-    
 } 
+
 @media screen and (max-width: 768px){
     #introduccion{
         width: 90% !important;
@@ -252,16 +201,12 @@ nav .logo{
     #blogger{
         width: 90% !important;
     }
-    
-    
-
 }
 
 
 /*tables largas y laptop*/
 @media screen and (min-width: 960px){
-    
-    
+        
     #contactos .cuadros{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr ;
@@ -326,13 +271,5 @@ nav .logo{
         grid-area: f4;
     
     }
-    /*#sesiones .sesioness div{
-        grid-column: span 3;
-      
-     }*/
-     
-     
-
-
 }
 
